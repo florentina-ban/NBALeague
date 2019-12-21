@@ -1,0 +1,7 @@
+C:\Users\Flore\Desktop\info18\MAP\NBALeague\bin\Debug\NBALeague.exe.config
+C:\Users\Flore\Desktop\info18\MAP\NBALeague\bin\Debug\NBALeague.exe
+C:\Users\Flore\Desktop\info18\MAP\NBALeague\bin\Debug\NBALeague.pdb
+C:\Users\Flore\Desktop\info18\MAP\NBALeague\obj\Debug\NBALeague.csprojAssemblyReference.cache
+C:\Users\Flore\Desktop\info18\MAP\NBALeague\obj\Debug\NBALeague.csproj.CoreCompileInputs.cache
+C:\Users\Flore\Desktop\info18\MAP\NBALeague\obj\Debug\NBALeague.exe
+C:\Users\Flore\Desktop\info18\MAP\NBALeague\obj\Debug\NBALeague.pdb
