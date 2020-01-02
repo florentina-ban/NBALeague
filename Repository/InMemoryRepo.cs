@@ -55,7 +55,10 @@ namespace NBALeague.Repository
 
         public E GetOne(Id id)
         {
-             return toti.Where(x=>x.Id.Equals(id)).First();
+            E[] li = toti.Where(x => x.Id.Equals(id)).ToArray();
+            if (li.Length == 0)
+                return null;
+             return li[0];
         }
 
         public int Lungime()

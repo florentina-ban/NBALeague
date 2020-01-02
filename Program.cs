@@ -1,5 +1,8 @@
-﻿using NBALeague.Domain;
+﻿using NBALeague.Controller;
+using NBALeague.Domain;
 using NBALeague.Repository;
+using NBALeague.Services;
+using NBALeague.UI;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -12,28 +15,29 @@ namespace NBALeague
     class Program
     {
         static void Main(string[] args)
-        {            
-            InMemoryRepo<int,Elev> repo = new InMemoryRepo<int,Elev>();
-            Elev e1 = new Elev(1, "nume1", "scoala");
-            Elev e2 = new Elev(2, "nume2", "scoala");
-            Elev e3 = new Elev(3, "nume3", "scoala");
-            Elev e4 = new Elev(4, "nume4", "scoala");
+        {
+            MainController mainController = new MainController();
+            Consola consola = new Consola(mainController);
+            consola.Execute();
 
-            EleviDBRepo eleviRepo = new EleviDBRepo();
-            eleviRepo.LoadData();
-            //eleviRepo.getToti().ForEach(x => Console.WriteLine(x));
+/*      
+            // scorul de un anumit meci - stiind id-ul meciului
+            int meci2 = 4;
+            Scor s = meciRepo.getScor(meci2);
+            if (s==null)
+                Console.WriteLine("meciul nu exista");
+            else
+                Console.WriteLine("scorul pt meciul "+meci2.ToString()+ " "+s.ToString());
 
-            EchipaDBRepo echipaRepo = new EchipaDBRepo();
-            echipaRepo.LoadData();
-            //echipaRepo.getToti().ForEach(Console.WriteLine);
-
-            JucatoriDBRepo jucatoriRepo = new JucatoriDBRepo(echipaRepo);
-            jucatoriRepo.LoadData();
-            //jucatoriRepo.getToti().ForEach(Console.WriteLine);
-
-            MeciDBRepo meciRepo = new MeciDBRepo(echipaRepo);
-            meciRepo.LoadData();
-            meciRepo.getToti().ForEach(Console.WriteLine);
+            // scorul de un anumit meci - stiind id-ul id-ul echipelor
+            int ec1 = 2;
+            int ec2 = 4;
+            List<Scor> scorList = meciRepo.getScor(ec1, ec2);
+            if (scorList==null)
+                Console.WriteLine("meciul nu exista");
+            else
+                meciRepo.getScor(ec1, ec2).ForEach(Console.WriteLine);
+                */
         }
 
     }
