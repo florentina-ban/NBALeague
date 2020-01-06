@@ -23,8 +23,8 @@ namespace NBALeague.Domain
         public override string ToString()
         {
             return " Meci{ Id= " + base.Id.ToString() + "  " +
-                            echipa1.Nume + " - " +
-                            echipa2.Nume + "        " +
+                            echipa1.Nume + "(Id: "+echipa1.Id+" ) - " +
+                            echipa2.Nume + "(Id: " + echipa2.Id + " )           " +
                            date.ToString();
         }
     }
